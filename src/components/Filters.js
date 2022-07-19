@@ -290,6 +290,12 @@ const Wrapper = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media only screen and (max-width: 36em) {
+        width: 2rem;
+        height: 2rem;
+      }
+
       &.active {
         svg {
           width: 0.8rem;
