@@ -35,6 +35,10 @@ const Wrapper = styled.div`
 
   .checkout--empty {
     text-align: center;
+
+    h2 {
+      text-transform: unset;
+    }
   }
 `;
 export default CheckoutPage;

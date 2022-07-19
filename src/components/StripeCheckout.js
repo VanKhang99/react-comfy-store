@@ -47,7 +47,7 @@ const CheckoutForm = () => {
     style: {
       base: {
         color: "#32325d",
-        fontFamily: "Arial, sans-serif",
+        fontFamily: "Rubik, sans-serif",
         fontSmoothing: "antialiased",
         fontSize: "16px",
         "::placeholder": {

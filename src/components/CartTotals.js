@@ -98,6 +98,12 @@ const Wrapper = styled.section`
       }
     }
   }
+
+  @media only screen and (max-width: 25em) {
+    .cart-payment {
+      padding: 2rem 3.2rem;
+    }
+  }
 `;
 
 export default CartTotals;

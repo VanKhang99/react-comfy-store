@@ -82,5 +82,13 @@ const Wrapper = styled.section`
       line-height: 1.5;
     }
   }
+
+  @media only screen and (max-width: 25em) {
+    .cart-page__shopping,
+    .cart-page__clear {
+      padding: 1rem 1.6rem;
+      font-size: 1.4rem;
+    }
+  }
 `;
 export default CartContent;
