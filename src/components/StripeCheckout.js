@@ -103,8 +103,10 @@ const CheckoutForm = () => {
       ) : (
         <article>
           <h4>Hello, {myUser && myUser.name}</h4>
-          <p>Your total is {formatPrice(shippingFee + totalAmount)}</p>
-          <p>Test Card Number: 4242 4242 4242 4242</p>
+          <p>
+            Your total: <span>{formatPrice(shippingFee + totalAmount)}</span>{" "}
+          </p>
+          <p>Test card number: 4242 4242 4242 4242</p>
         </article>
       )}
 
@@ -160,6 +162,10 @@ const Wrapper = styled.section`
     p {
       font-size: 1.6rem;
       margin-bottom: 2rem;
+
+      span {
+        font-weight: 700;
+      }
     }
 
     @media only screen and (max-width: 50em) {

@@ -153,8 +153,8 @@ const Wrapper = styled.article`
       }
 
       &__color span {
-        width: 0.8rem;
-        height: 0.8rem;
+        width: 1rem;
+        height: 1rem;
         border-radius: 50%;
       }
 

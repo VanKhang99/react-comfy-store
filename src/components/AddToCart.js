@@ -85,7 +85,7 @@ const Wrapper = styled.section`
     &__list {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 1.6rem;
     }
 
     &__item {
@@ -108,7 +108,7 @@ const Wrapper = styled.section`
   }
 
   .product-button {
-    margin-top: 1.6rem;
+    margin-top: 2.4rem;
     font-size: 1.6rem;
     padding: 0.8rem 1.6rem;
   }

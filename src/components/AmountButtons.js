@@ -51,6 +51,10 @@ const Wrapper = styled.div`
   align-items: center;
   justify-items: center;
 
+  @media only screen and (max-width: 62em) {
+    justify-items: start;
+  }
+
   &.small {
     width: 10rem;
 
@@ -67,6 +71,7 @@ const Wrapper = styled.div`
       svg {
         width: 1.4rem;
         height: 1.4rem;
+        color: var(--clr-grey-1);
       }
 
       &.small svg {

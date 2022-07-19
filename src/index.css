@@ -172,6 +172,7 @@ BUTTON
   font-family: Rubik, sans-serif;
 }
 
+/* BUTTON CART */
 .button--cart {
   color: var(--clr-grey-1);
   display: flex;
@@ -179,25 +180,25 @@ BUTTON
   font-weight: 500;
 }
 
-.button--cart:hover {
-  opacity: 0.95;
-}
-
+/* BUTTON AUTH */
 .button--auth {
   font-size: 2.4rem;
   display: flex;
   align-items: center;
   font-weight: 500;
+  color: var(--clr-grey-1);
 }
 
 .button--auth svg {
   margin-left: 0.5rem;
 }
 
+.button--cart:hover,
 .button--auth:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
+/* BUTTON BARS */
 .button--bars {
   display: none;
 }
@@ -208,6 +209,7 @@ BUTTON
   color: var(--clr-primary-5);
 }
 
+/* BUTTON CLOSE */
 .button--close svg {
   width: 3.2rem;
   height: 3.2rem;
@@ -215,6 +217,7 @@ BUTTON
   margin-top: 3px;
 }
 
+/* BUTTON MAIN */
 .button--main {
   display: inline-block;
   font-size: 1.6rem;
@@ -234,6 +237,7 @@ BUTTON
   background-color: var(--clr-primary-7);
 }
 
+/* BUTTON subscribe */
 .button--subscribe {
   font-size: 1.8rem;
   color: var(--clr-black);
@@ -249,6 +253,7 @@ BUTTON
   color: var(--clr-white);
 }
 
+/* BUTTON CLEAR FILTER */
 .button--clear-filter {
   background-color: var(--clr-red-dark);
   color: var(--clr-white);
@@ -264,6 +269,11 @@ BUTTON
   opacity: 0.85;
 }
 
+/*
+=============== 
+MEDIA QUERY
+===============
+*/
 @media only screen and (max-width: 80em) {
   .container {
     width: 95vw;

@@ -78,5 +78,9 @@ const Wrapper = styled.div`
       justify-content: center;
     }
   }
+
+  button svg {
+    color: var(--clr-grey-1);
+  }
 `;
 export default CartButtons;
