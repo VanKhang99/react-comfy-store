@@ -261,7 +261,7 @@ const Wrapper = styled.div`
       display: flex;
       align-items: center;
       margin: 0.4rem 0;
-      gap: 0.8rem;
+      gap: 1.2rem;
 
       @media only screen and (max-width: 50em) {
         gap: 1.4rem;
@@ -323,6 +323,13 @@ const Wrapper = styled.div`
         letter-spacing: 0;
         margin-bottom: 0;
         text-transform: capitalize;
+      }
+
+      @media only screen and (max-width: 36em) {
+        input {
+          width: 2rem;
+          height: 2rem;
+        }
       }
     }
   }
