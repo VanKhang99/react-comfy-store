@@ -292,8 +292,8 @@ const Wrapper = styled.div`
       justify-content: center;
 
       @media only screen and (max-width: 36em) {
-        width: 2rem;
-        height: 2rem;
+        width: 2.4rem;
+        height: 2.4rem;
       }
 
       &.active {
