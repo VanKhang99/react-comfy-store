@@ -32,7 +32,7 @@ const Wrapper = styled.section`
     column-gap: 2.4rem;
     row-gap: 4.8rem;
 
-    @media only screen and (max-width: 48em) {
+    @media only screen and (max-width: 50em) {
       grid-template-columns: 1fr;
     }
   }

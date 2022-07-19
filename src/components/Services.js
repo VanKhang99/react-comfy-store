@@ -8,7 +8,7 @@ const Services = () => {
       <div className="container services-center">
         <div className="services-header">
           <h3 className="heading-third">
-            Custom Furniture <br /> Built Only For You
+            Custom furniture <br /> built only for you
           </h3>
           <p className="services-header__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe

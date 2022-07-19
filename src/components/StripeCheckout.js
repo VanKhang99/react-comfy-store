@@ -96,9 +96,9 @@ const CheckoutForm = () => {
     <div>
       {succeeded ? (
         <article>
-          <h4>Thank you</h4>
-          <h4>Your payment was successful!</h4>
-          <h4>Redirecting to home page shortly</h4>
+          <h4>Thank you.</h4>
+          <h4>Your payment was successful.</h4>
+          <h4>Redirecting to home page shortly!!!</h4>
         </article>
       ) : (
         <article>
@@ -155,17 +155,24 @@ const Wrapper = styled.section`
       font-size: 2.4rem;
       margin-bottom: 1.2rem;
       line-height: 1;
-      letter-spacing: var(--spacing);
     }
 
     p {
       font-size: 1.6rem;
       margin-bottom: 2rem;
     }
+
+    @media only screen and (max-width: 50em) {
+      padding: 0 2rem;
+
+      h4 {
+        font-size: 2rem;
+      }
+    }
   }
 
   form {
-    width: 30vw;
+    width: 40vw;
     align-self: center;
     box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
       0px 2px 5px 0px rgba(50, 50, 93, 0.1),
@@ -296,9 +303,10 @@ const Wrapper = styled.section`
       transform: rotate(360deg);
     }
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 50em) {
     form {
       width: 80vw;
+      margin: 0 auto;
     }
   }
 `;

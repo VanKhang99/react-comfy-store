@@ -10,7 +10,7 @@ const AboutPage = () => {
       <div className="container about-page">
         <img src={aboutImg} alt="Furniture" className="about-page__image" />
         <div className="about-content">
-          <h2 className="heading-second">Our Story</h2>
+          <h2 className="heading-second">Our story</h2>
           <span className="underline"></span>
           <p className="about-content__description">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
@@ -49,6 +49,10 @@ const Wrapper = styled.section`
   }
 
   .about-content {
+    h2 {
+      text-transform: unset;
+    }
+
     .underline {
       margin: 0;
     }

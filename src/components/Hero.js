@@ -54,13 +54,14 @@ const Wrapper = styled.section`
     &__description {
       font-size: 2rem;
       color: var(--clr-grey-5);
-      line-height: 2;
+      line-height: 1.8;
       margin-bottom: 3.2rem;
     }
 
     &__button {
-      font-size: 1.6rem;
+      font-size: 2rem;
       padding: 1.2rem 2.4rem;
+      text-transform: unset;
     }
 
     &-images {
@@ -116,8 +117,8 @@ const Wrapper = styled.section`
       }
 
       &__button {
-        padding: 0.6rem 1.2rem;
-        font-size: 1.4rem;
+        padding: 0.8rem 1.6rem;
+        font-size: 1.6rem;
       }
     }
 

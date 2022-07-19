@@ -83,8 +83,7 @@ const Wrapper = styled.article`
 
     &__information {
       margin-top: 1.6rem;
-      font-size: 1.6rem;
-      letter-spacing: var(--spacing);
+      font-size: 1.8rem;
 
       display: flex;
       justify-content: space-between;

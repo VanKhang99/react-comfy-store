@@ -70,6 +70,7 @@ const Wrapper = styled.div`
       color: #fff;
       width: 2.4rem;
       height: 2.4rem;
+      font-weight: 400;
       border-radius: 50%;
       background-color: var(--clr-primary-5);
       display: flex;

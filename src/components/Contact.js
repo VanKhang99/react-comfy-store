@@ -22,7 +22,7 @@ const Contact = () => {
             <input
               type="email"
               className="contact-form__input"
-              placeholder="Enter Email"
+              placeholder="Enter email"
               name="_replyto"
             />
 

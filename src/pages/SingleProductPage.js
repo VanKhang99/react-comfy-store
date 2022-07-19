@@ -120,7 +120,7 @@ const Wrapper = styled.main`
     }
 
     h2 {
-      color: var(----clr-grey-1);
+      color: var(--clr-grey-1);
     }
 
     font-size: 1.6rem;

@@ -33,9 +33,12 @@ const FeaturedProducts = () => {
           })}
         </div>
 
-        <Link to="/products" className="button button--main">
+        <Link
+          to="/products"
+          className="button button--main featured-product__button"
+        >
           {" "}
-          All Products
+          All products
         </Link>
       </div>
     </Wrapper>
@@ -57,6 +60,16 @@ const Wrapper = styled.section`
       row-gap: 4rem;
 
       margin: 6.4rem auto;
+    }
+
+    &__button {
+      font-size: 1.8rem;
+      padding: 0.8rem 2.4rem;
+
+      @media only screen and (max-width: 62em) {
+        font-size: 1.6rem;
+        padding: 0.8rem 1.6rem;
+      }
     }
   }
 `;

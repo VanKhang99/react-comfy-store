@@ -79,7 +79,7 @@ const Filters = () => {
             {companies.map((com, index) => {
               return (
                 <option key={index} value={com}>
-                  {com}
+                  {com[0].toUpperCase() + com.slice(1)}
                 </option>
               );
             })}
@@ -165,7 +165,7 @@ const Filters = () => {
       </form>
 
       <button onClick={clearFilters} className="button button--clear-filter">
-        Clear Filters
+        Clear filters
       </button>
     </Wrapper>
   );
@@ -173,13 +173,14 @@ const Filters = () => {
 
 const Wrapper = styled.div`
   .form {
-    @media only screen and (max-width: 48em) {
+    @media only screen and (max-width: 50em) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      column-gap: 3.2rem;
 
       .category {
         grid-row: 2 / 5;
-        grid-column: 2;
+        grid-column: 1;
       }
     }
 
@@ -195,25 +196,33 @@ const Wrapper = styled.div`
   }
 
   .form-control {
-    margin-bottom: 2rem;
+    margin-bottom: 3.2rem;
+
+    @media only screen and (max-width: 50em) {
+      margin-bottom: 2.4rem;
+    }
 
     &__input {
       padding: 0.8rem;
       background-color: var(--clr-grey-10);
       border-radius: var(--radius);
       border-color: transparent;
-      letter-spacing: var(--spacing);
+      font-size: 1.6rem;
+      width: 100%;
+
+      @media only screen and (max-width: 50em) {
+        width: unset;
+      }
     }
 
     &__label {
       display: block;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       margin-bottom: 0.8rem;
-      letter-spacing: var(--spacing);
       line-height: 1.25;
 
       @media only screen and (max-width: 50em) {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
     }
 
@@ -229,12 +238,15 @@ const Wrapper = styled.div`
       letter-spacing: var(--spacing);
       color: var(--clr-grey-5);
       line-height: 1;
+      font-size: 1.4rem;
 
       padding: 0.4rem 0;
       cursor: pointer;
 
       &--active {
-        border-bottom: 1px solid var(--clr-grey-5);
+        border-bottom: 1px solid var(--clr-grey-3);
+        color: var(--clr-grey-3);
+        font-weight: 500;
       }
     }
 
@@ -263,7 +275,9 @@ const Wrapper = styled.div`
       letter-spacing: var(--spacing);
       color: var(--clr-grey-5);
       &.active {
-        box-shadow: 0 1px 0 0 var(--clr-grey-5);
+        border-bottom: 1px solid var(--clr-grey-3);
+        color: var(--clr-grey-3);
+        font-weight: 500;
       }
     }
 
@@ -297,6 +311,7 @@ const Wrapper = styled.div`
       grid-template-columns: auto 1fr;
       justify-items: center;
       column-gap: 0.8rem;
+      font-weight: bold;
 
       label {
         letter-spacing: 0;

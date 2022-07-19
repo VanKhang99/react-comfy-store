@@ -65,6 +65,8 @@ const Wrapper = styled.article`
       grid-template-columns: auto 20rem;
       align-items: center;
       gap: 1.6rem;
+
+      font-size: 1.6rem;
     }
 
     &__image {
@@ -75,16 +77,13 @@ const Wrapper = styled.article`
     }
 
     &__name {
-      font-size: 1.4rem;
-      letter-spacing: var(--spacing);
+      font-size: 1.6rem;
       text-transform: capitalize;
       width: 100%;
     }
 
     &__color {
-      font-size: 1.4rem;
       color: var(--clr-grey-5);
-      letter-spacing: var(--spacing);
 
       display: flex;
       align-items: center;
@@ -97,15 +96,13 @@ const Wrapper = styled.article`
         border-radius: var(--radius);
 
         position: relative;
-        top: 2px;
+        top: 1px;
       }
     }
 
     &__price,
     &__total {
       font-size: 1.6rem;
-
-      letter-spacing: var(--spacing);
     }
 
     &__price {
@@ -152,7 +149,7 @@ const Wrapper = styled.article`
 
       &__name,
       &__color {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
 
       &__color span {
@@ -163,7 +160,7 @@ const Wrapper = styled.article`
 
       &__price--small {
         display: block;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         letter-spacing: var(--spacing);
         color: var(--clr-primary-5);
         font-weight: bold;

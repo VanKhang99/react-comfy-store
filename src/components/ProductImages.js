@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   }
 
   .product__image--main {
-    height: 50rem;
+    height: 55rem;
 
     @media only screen and (max-width: 62em) {
       height: 60rem;

@@ -51,8 +51,6 @@ const Wrapper = styled.section`
     border: 1px solid var(--clr-grey-8);
     border-radius: var(--radius);
     font-size: 1.6rem;
-    letter-spacing: var(--spacing);
-    text-transform: capitalize;
 
     &__subtotal,
     &__fee,

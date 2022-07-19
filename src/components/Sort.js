@@ -37,7 +37,10 @@ const Sort = () => {
         </button>
       </div>
 
-      <p className="sort__results">{`${productsList.length} products found`}</p>
+      <p className="sort__results">
+        {" "}
+        <span>{`${productsList.length}`}</span> Products found
+      </p>
 
       <hr className="horizontal-line" />
 
@@ -62,10 +65,9 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: auto auto 1fr auto;
   align-items: center;
-  column-gap: 3.2rem;
+  column-gap: 2.4rem;
   margin-bottom: 3.2rem;
   font-size: 1.6rem;
-  text-transform: capitalize;
 
   @media only screen and (max-width: 50em) {
     font-size: 1.4rem;
@@ -107,10 +109,14 @@ const Wrapper = styled.div`
     }
   }
 
-  .sort__results {
+  .sort__results span {
+    font-weight: bold;
   }
 
   .sort-select {
+    &__label {
+      margin-right: 1rem;
+    }
     select {
       padding: 0.4rem 0.8rem;
       border-color: transparent;

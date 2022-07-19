@@ -55,20 +55,22 @@ const Wrapper = styled.section`
   .cart-page__clear {
     color: #fff;
     font-size: 1.6rem;
-    padding: 0.4rem 0.8rem;
-    text-transform: capitalize;
+    padding: 0.8rem 1.6rem;
   }
 
   .cart-page__shopping:hover {
-    background-color: var(--clr-primary-5);
+    color: var(--clr-grey-1);
   }
 
   .cart-page__clear {
-    font-size: 1.4rem;
     border-radius: var(--radius);
     background-color: var(--clr-black);
-    letter-spacing: var(--spacing);
-    padding: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s linear;
+
+    :hover {
+      opacity: 0.9;
+    }
   }
 
   @media only screen and (max-width: 50em) {
@@ -76,12 +78,7 @@ const Wrapper = styled.section`
       display: none;
     }
 
-    .cart-page__shopping {
-      font-size: 1.4rem;
-    }
-
     .cart-page__clear {
-      padding: 0.4rem 0.8rem;
       line-height: 1.5;
     }
   }

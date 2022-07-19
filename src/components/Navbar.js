@@ -92,15 +92,15 @@ const NavContainer = styled.nav`
 
       a {
         display: inline-block;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         text-transform: capitalize;
-        letter-spacing: var(--spacing);
         color: var(--clr-grey-3);
         padding: 0.8rem;
+        font-weight: 500;
         transition: all 0.2s linear;
 
         :hover {
-          box-shadow: 0 2px 0 0 var(--clr-primary-7);
+          color: var(--clr-primary-5);
         }
       }
     }

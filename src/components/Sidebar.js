@@ -92,9 +92,9 @@ const SidebarContainer = styled.div`
 
     &__link {
       display: block;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
+      font-weight: 500;
       text-transform: capitalize;
-      letter-spacing: var(--spacing);
       color: var(--clr-grey-3);
       padding: 1.6rem 2.4rem;
       transition: all 0.2s linear;
@@ -102,7 +102,7 @@ const SidebarContainer = styled.div`
       :hover {
         padding: 1.6rem 2.4rem 1.6rem 3.2rem;
         background-color: var(--clr-grey-10);
-        color: var(--clr-grey-2);
+        color: var(--clr-primary-5);
       }
     }
   }

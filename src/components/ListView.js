@@ -71,7 +71,8 @@ const Wrapper = styled.div`
 
     &__details {
       text-transform: capitalize;
-      padding: 0.4rem 1.6rem;
+      padding: 0.6rem 2.4rem;
+      font-size: 1.6rem;
     }
   }
 
