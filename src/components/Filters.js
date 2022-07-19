@@ -292,8 +292,8 @@ const Wrapper = styled.div`
       justify-content: center;
 
       @media only screen and (max-width: 36em) {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2.2rem;
+        height: 2.2rem;
       }
 
       &.active {
@@ -327,8 +327,8 @@ const Wrapper = styled.div`
 
       @media only screen and (max-width: 36em) {
         input {
-          width: 2rem;
-          height: 2rem;
+          width: 2.2rem;
+          height: 2.2rem;
         }
       }
     }
