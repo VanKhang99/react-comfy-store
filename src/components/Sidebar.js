@@ -66,6 +66,7 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100vh;
+    z-index: 100;
     background-color: #fff;
     transform: translateX(-100%);
     transition: all 0.3s linear;

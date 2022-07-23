@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useEffect, useMemo } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import { FaBars } from "react-icons/fa";
@@ -11,36 +11,70 @@ import { useUserContext } from "../context/user_context";
 const Nav = () => {
   const { openSidebar } = useProductsContext();
   const { myUser } = useUserContext();
+  const targetRef = useRef(null);
+  const [isSticky, setIsSticky] = useState(false);
+
+  const stickyCallback = (entries) => {
+    const [entry] = entries;
+    setIsSticky(entry.isIntersecting);
+  };
+
+  const optionsObserver = useMemo(() => {
+    return {
+      root: null,
+      threshold: 0,
+    };
+  }, []);
+
+  useEffect(() => {
+    const observerNavbar = new IntersectionObserver(
+      stickyCallback,
+      optionsObserver
+    );
+    const currentTarget = targetRef.current;
+    if (currentTarget) observerNavbar.observe(currentTarget);
+
+    return () => {
+      if (currentTarget) observerNavbar.unobserve(currentTarget);
+    };
+  }, [targetRef, optionsObserver]);
+
   return (
-    <NavContainer className="nav">
-      <div className="nav__center">
-        <div className="nav__logo">
-          <Link to="/">
-            <img src={logo} alt="Comfy Sloth logo" />
-          </Link>
-        </div>
+    <NavContainer ref={targetRef} className="nav">
+      <div className={`${isSticky ? "" : "nav__sticky"}`}>
+        <div className="nav__center">
+          <div className="nav__logo">
+            <Link to="/">
+              <img src={logo} alt="Comfy Sloth logo" />
+            </Link>
+          </div>
 
-        <ul className="nav__list">
-          {links.map((link) => {
-            const { id, text, url } = link;
-            return (
-              <li key={id}>
-                <Link to={url}>{text}</Link>
+          <ul className="nav__list">
+            {links.map((link) => {
+              const { id, text, url } = link;
+              return (
+                <li key={id} className="nav__item">
+                  <Link className="nav__link" to={url}>
+                    {text}
+                  </Link>
+                </li>
+              );
+            })}
+            {myUser && (
+              <li className="nav__item">
+                <Link className="nav__link" to="/checkout">
+                  checkout
+                </Link>
               </li>
-            );
-          })}
-          {myUser && (
-            <li>
-              <Link to="/checkout">checkout</Link>
-            </li>
-          )}
-        </ul>
+            )}
+          </ul>
 
-        <CartButtons />
+          <CartButtons />
 
-        <button className="button button--bars" onClick={openSidebar}>
-          <FaBars />
-        </button>
+          <button className="button button--bars" onClick={openSidebar}>
+            <FaBars />
+          </button>
+        </div>
       </div>
     </NavContainer>
   );
@@ -50,10 +84,24 @@ const NavContainer = styled.nav`
   height: 8rem;
   display: flex;
   align-items: center;
+  justify-content: center;
+
   .nav {
+    &__sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: inherit;
+      z-index: 100;
+      background-color: var(--clr-primary-9);
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.08);
+    }
+
     &__center {
       width: 90vw;
       max-width: var(--max-width);
+      height: inherit;
       margin: 0 auto;
 
       display: grid;
